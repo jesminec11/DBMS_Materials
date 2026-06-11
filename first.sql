@@ -119,3 +119,55 @@ WHERE address LIKE "%trail%" OR address LIKE "%avenue%";
 SELECT *
 FROM customers
 WHERE phone LIKE "%9";
+
+SELECT *
+FROM customers
+WHERE last_name REGEXP "field";
+
+SELECT *
+FROM customers
+WHERE last_name REGEXP "^field";
+
+SELECT *
+FROM customers
+WHERE last_name REGEXP "field$";
+
+SELECT *
+FROM customers
+WHERE last_name REGEXP "field|mac|rose";
+
+SELECT *
+FROM customers
+WHERE last_name REGEXP "field$|mac|rose";
+
+SELECT *
+FROM customers
+WHERE last_name REGEXP "[gim]e";
+
+SELECT *
+FROM customers
+WHERE last_name REGEXP "[a-h]e";
+
+SELECT *
+FROM customers
+WHERE first_name REGEXP "Elka|Ambur";
+
+SELECT *
+FROM customers
+WHERE last_name REGEXP "EY$|ON$";
+
+SELECT *
+FROM customers
+WHERE last_name REGEXP "^MY|SE";
+
+SELECT *
+FROM customers
+WHERE last_name REGEXP "B[RU]";
+
+SELECT *
+FROM customers
+WHERE phone IS NULL;
+
+SELECT * 
+FROM orders
+WHERE shipped_date IS NULL;
